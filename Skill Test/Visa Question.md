@@ -41,5 +41,5 @@ def getMinServers(expected_load, server):
             servers_selected += 1
             if expected_load == 0:
                 return servers_selected
-    return -1 `
+    return -1 
 
