@@ -9,14 +9,14 @@ Every food stall accepts particular color coupons only.
 There are 10 different color coupons represented by numbers ranging from 1 to 10. You are given certain number of queries Q. 
 Find the sum of the outputs of all the queries.
 
-**Input Specification: **
+**Input Specification:**
 
-*input1:* N, total size of the group of friends including Robin
-*input2:* M, number of stalls
-*input3:* A two dimensional array of size M * 10, where cell(i, j) = 1 denotes that stall i accepts coupon j
-*input4:* A two dimensional array of size N * 10, where cell(i, j) = 1 denotes that person i has coupon j
-*input5:* Q, number of queries
-*input6:* A two dimensional array of size Q* 2, containing sets for which the query
+- *input1:* N, total size of the group of friends including Robin
+- *input2:* M, number of stalls
+- *input3:* A two dimensional array of size M * 10, where cell(i, j) = 1 denotes that stall i accepts coupon j
+- *input4:* A two dimensional array of size N * 10, where cell(i, j) = 1 denotes that person i has coupon j
+- *input5:* Q, number of queries
+- *input6:* A two dimensional array of size Q* 2, containing sets for which the query
 
 All has to be answered. For each row [i, j], if person i can eat at stall j, then output of the query is 1 else output is 0
 
