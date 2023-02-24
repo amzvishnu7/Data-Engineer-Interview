@@ -1,7 +1,12 @@
 Question - Server Selection
 
-Some developers want to deploy their application on different servers with a load balancer in the front. There are n servers to choose from where the number of requests that can be handled by the ith server is server[i]. The number of requests served by any server is a power of 2 i.e. 1, 2, 4, 8,
-16,...etc. Given the array server and an integer expected_load, find the minimum number of servers that must be chosen such that the total sum of requests served by all the chosen servers is exactly equal to the expected_load. If there is no combination of servers that can serve exactly expected load requests, report -1 as the answer.
+Some developers want to deploy their application on different servers with a load balancer in the front. 
+There are n servers to choose from where the number of requests that can be handled by the ith server is server[i]. 
+The number of requests served by any server is a power of 2 i.e. 1, 2, 4, 8,16,...etc. 
+Given the array server and an integer expected_load, find the minimum number of servers that must be chosen such that the 
+total sum of requests served by all the chosen servers is exactly equal to the expected_load. 
+If there is no combination of servers that can serve exactly expected load requests, report -1 as the answer.
+
 
 Example
 
