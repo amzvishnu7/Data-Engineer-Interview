@@ -42,3 +42,48 @@ Q = 5
 queries = [[1, 1], [2, 2], [3, 3], [4, 1], [5, 2]]
 
 print(food_stalls_func(N, M, food_stalls_data, coupons, Q, queries))
+
+
+#### Q2. Lost In The Forest - Python 
+
+A boy is lost in an infinitely long 1 dimensional jungle. The jungle is such that if the boy is standing at location N, 
+then, after the next step he would be moved to location (N/2) if N is even, and (3N + 1) if N is odd.
+However, there is a magic door in the jungle that can take him to any location N he wants to go between location 1 and M (including both), but just once.
+
+Find the location that the boy should go to such that he reaches the maximum number of locations in the forest.
+
+ **Input Specification:**
+ 
+- *input1:* The value of M
+
+**Output Specification:**
+
+Return the location where the boy should go first. If there are multiple answers, then return the largest one.
+
+**Example **
+- input1: 5
+- Output: 3
+
+```python
+    def lostInForest(cls, input1):
+        def max_locations(m):
+            max_loc = 0
+            max_start = 0
+            for i in range(1, m+1):
+                location = i
+                count = 1
+                while location != 1:
+                    if location % 2 == 0:
+                        location = location / 2
+                    else:
+                        location = 3 * location + 1
+                    count += 1
+                if count > max_loc:
+                    max_loc = count
+                    max_start = i
+            return max_start
+
+        return max_locations(input1)
+
+print(UserMainCode.lostInForest(5)) 
+
