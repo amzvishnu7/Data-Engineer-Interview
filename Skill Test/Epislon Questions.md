@@ -43,6 +43,7 @@ queries = [[1, 1], [2, 2], [3, 3], [4, 1], [5, 2]]
 
 print(food_stalls_func(N, M, food_stalls_data, coupons, Q, queries))
 
+```
 
 #### Q2. Lost In The Forest - Python 
 
@@ -87,3 +88,4 @@ Return the location where the boy should go first. If there are multiple answers
 
 print(UserMainCode.lostInForest(5)) 
 
+```
