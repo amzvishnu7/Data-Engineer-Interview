@@ -68,7 +68,7 @@ object scalastdy {
 #### Q2. There are Rs.2000, Rs.500, Rs.200 and Rs.100 denominations available in ATM. Write a program to find out the denominations for a given user amount such that ATM has to dispense minimum number of notes. 
 
 **Example:** 
-- *Input :*  3100 \\
+- *Input :*  3100 
 - *Output :*  Rs.  $2000 \rightarrow 1$, Rs. $500 \rightarrow 2$, Rs. $100 \rightarrow 1$ 
 
 ***Code :***
