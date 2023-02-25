@@ -23,7 +23,7 @@
 - *Input:* n=2
 - *Output:* false
 
-***Code : ***
+***Code :***
 
 This Question We are using Scala
 
@@ -71,7 +71,7 @@ object scalastdy {
 - *Input :*  3100 \\
 - *Output :*  Rs.  $2000 \rightarrow 1$, Rs. $500 \rightarrow 2$, Rs. $100 \rightarrow 1$ 
 
-***Code : ***
+***Code :***
 
 This Question We are using Scala
 
