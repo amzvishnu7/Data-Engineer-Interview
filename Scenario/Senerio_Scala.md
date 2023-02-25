@@ -44,8 +44,6 @@ object scalastudy {
 7 & 8 & 9
 \end{pmatrix}
 
-sum1 = 1 + 5 + 9 \\
-
-sum2 = 3 + 5 + 7 \\
-
 ```
+- sum1 = 1 + 5 + 9
+- sum2 = 3 + 5 + 7 
