@@ -31,5 +31,21 @@ object scalastudy {
 }
 ```
 
+#### Q2.Calculate the sum of the elements in the diagonal of a following matrix / 2D array, and logic should be dynamic enough to work on any NxN matrix
 
+**Input :** [1,2,3],[4,5,6],[7,8,9]
 
+**Output :**
+
+```math
+\begin{pmatrix}
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{pmatrix}
+
+sum1 = 1 + 5 + 9 \\
+
+sum2 = 3 + 5 + 7 \\
+
+```
