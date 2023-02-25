@@ -111,3 +111,62 @@ package pack
 - The faster car will slow down to match the slower car's speed. The distance between these two cars is ignored (i.e., they are assumed to have the same position).
 - A car fleet is some non-empty set of cars driving at the same position and same speed. Note that a single car is also a car fleet.
 -  If a car catches up to a car fleet right at the destination point, it will still be considered as one car fleet.
+
+Return the number of car fleets that will arrive at the destination.
+
+**Input : **
+- Target = 12, 
+- Position = [10,8,0,5,3], Speed = [2,4,1,1,3]
+
+**Explanation :**
+
+- The cars starting at 10 (speed 2) and 8 (speed 4) become a fleet, meeting each other at 12. 
+- The car starting at 0 does not catch up to any other car, so it is a fleet by itself.
+- The cars starting at 5 (speed 1) and 3 (speed 3) become a fleet, meeting each other at 6.
+- The fleet moves at speed 1 until it reaches target.
+
+***Code :***
+
+This Question We are using Scala Spark
+
+```scala
+package pack
+	import org.apache.spark.SparkContext
+	import org.apache.spark.sql.SparkSession
+	import org.apache.spark.SparkConf
+	import org.apache.spark.sql.functions._
+	
+	import scala.io.StdIn
+	
+	object queslas {
+		
+		def main(args: Array[String]): Unit={
+			
+			val conf = new SparkConf().setAppName("first").setMaster("local[*]")
+			val sc = new SparkContext(conf)
+			sc.setLogLevel("ERROR")
+			
+			val spark = SparkSession.builder.getOrCreate()
+			import spark.implicits._
+			
+			var tar = StdIn.readInt()
+			var pos = Array(10, 8, 0, 5, 3)
+			var spd = Array(2, 4, 1, 1, 3)
+			
+			val df = sc.parallelize(pos zip spd).toDF("Position", "Speed")
+						    .sort("Position")
+						
+			val cfleet = df.withColumn("RTime", expr(s"( $tar - Position ) / Speed"))
+							     .withColumn("Temp", expr(s"(Position+Speed)/$tar"))
+							
+			cfleet.show()
+			cfleet.printSchema()
+			
+			val res = cfleet.select("Temp").distinct().count()
+			
+			println(s"Number of car fleets: $res")
+			
+			
+		}
+	}
+	```
