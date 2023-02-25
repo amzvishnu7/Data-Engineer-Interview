@@ -114,7 +114,7 @@ package pack
 
 Return the number of car fleets that will arrive at the destination.
 
-**Input : **
+** Input : **
 - Target = 12, 
 - Position = [10,8,0,5,3], Speed = [2,4,1,1,3]
 
@@ -169,4 +169,5 @@ package pack
 			
 		}
 	}
+	
 	```
