@@ -66,7 +66,7 @@ print(max_val)
 sorted_list = sorted(stock_market.items(), key=lambda x: x[1])
 print(sorted_list)
 ```
-###  Q3. Write a Scala or Python Programme with two lists of integers as input, and returns a new list 
+####  Q4. Write a Scala or Python Programme with two lists of integers as input, and returns a new list 
 
 list_1 = [12, 25, 31, 20, 18]
 list_2 = [11, 9, 43, 22, 55]
@@ -85,4 +85,29 @@ list_2 = [11, 9, 43, 22, 55]
 for i, j in zip(list_1, reversed(list_2)):
     print(i,j)
  ```
+
+### Section - 2 - Spark ( All Codes Below Given are Python Codes )
+
+This Section We are not providing the entire spark code, Please declear imports Statments and Spark Conf...
+
+#### Q1. Write a Spark code to standarize the column names in the dataframe. All columns should be smaller case and replace space with underscore().
+
+**Input csv file : **
+
+- Emp Id, Emp Name, Dept Name
+- 101, Alice, Sales
+- 102, Bob, Sales
+
+**Expected Output : **
+
+- emp_id,emp_name,dept nare
+- 101, Alice, Sales
+- 102, Bob, Sales
+
+```python
+df = spark.read.csv("path/to/file.csv", header=True, inferSchema=True) 
+columns = [lower(regexp_replace(col, " ", "_")).alias(col) for col in df.columns]
+df = df.select(*columns)
+df.show()
+```
 
