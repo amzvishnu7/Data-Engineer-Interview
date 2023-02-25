@@ -1,6 +1,6 @@
 ## Tiger Analytics - Skill Test Questions
 
-### Section - 1 SCALA / Python 
+### Section - 1 - SCALA / Python ( All Codes Below Given are Python Codes )
 
 #### Q1. Have a list of 3 letters. Write a Python/Scala code to concatenate this list with another list of numbers whose range varies from 1 to 3 (3 is included).
 letters list = ['A', 'B', 'C]
@@ -66,3 +66,23 @@ print(max_val)
 sorted_list = sorted(stock_market.items(), key=lambda x: x[1])
 print(sorted_list)
 ```
+###  Q3. Write a Scala or Python Programme with two lists of integers as input, and returns a new list 
+
+list_1 = [12, 25, 31, 20, 18]
+list_2 = [11, 9, 43, 22, 55]
+
+**Expected Output** : 
+12 55
+25 22
+31 43
+20 9
+18 11
+
+```python
+list_1 = [12, 25, 31, 20, 18]
+list_2 = [11, 9, 43, 22, 55]
+
+for i, j in zip(list_1, reversed(list_2)):
+    print(i,j)
+ ```
+
