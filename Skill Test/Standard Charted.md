@@ -64,3 +64,42 @@ object scalastdy {
 	}	
 }
 ```
+
+#### Q2. There are Rs.2000, Rs.500, Rs.200 and Rs.100 denominations available in ATM. Write a program to find out the denominations for a given user amount such that ATM has to dispense minimum number of notes. 
+
+**Example:** 
+- *Input :*  3100 \\
+- *Output :*  Rs.  $2000 \rightarrow 1$, Rs. $500 \rightarrow 2$, Rs. $100 \rightarrow 1$ 
+
+***Code : ***
+
+This Question We are using Scala
+
+```scala
+package pack
+	import scala.io.StdIn
+	object scalafun {
+		
+		def main(args:Array[String]):Unit={
+			val l = List(2000,500,200,100)
+			var n = StdIn.readInt()
+			
+			for(i<- 0 to 5)
+			{
+				if(n>=100) {
+					var tq = n / l(i)
+					var tr = n % l(i)
+					println("Rs " + l(i) + " --- >" + tq)
+					n = tr
+				}
+				else if((n>0) && (n<100)) {
+					println(n + " Not avaliable")
+					return
+				}
+			}
+			
+		}
+		
+	}
+	```
+
