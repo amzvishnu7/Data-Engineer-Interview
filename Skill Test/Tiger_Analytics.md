@@ -7,6 +7,8 @@ letters list = ['A', 'B', 'C]
 
 **Expected Output:** [A1', 'B1', 'C1', 'A2', 'B2', 'C2', 'A3', 'B3', 'C3']
 
+***Code :***
+
 ```python
 letters = ['A', 'B', 'C']
 result = []
@@ -21,6 +23,8 @@ print(result)
 **Input:** Maths = 80, Physics = 58, Chemistry = 62, English = 72, Biology = 50
 
 **Expected Output:** Name: Vishnu - Subjects: {'Chemistry', 'English', 'Mathematics"}
+
+***Code :***
 
 ```python
 def print_above_60(name='None', subjects_marks={}):
@@ -45,6 +49,8 @@ stock_market = ('AXIS BANK': 7, 'BHARTI AIRTEL': 5,'COAL INDIA': 10,'ITC': 1, 'T
 (11, 'AMERICAN EXPRESS')
 
 [(1, 'ITC'), (2, 'L&T'), (3, 'TCS'), (5, 'BHARTI AIRTEL"), (7, AXIS BANK'), (8, 'KOTAK BANK"), (9, 'RELIANCE), (10, 'COAL INDIA'), (11, 'AMERICAN EXPRESS')]
+
+***Code :***
 
 ```python
 stock_market = {'AXIS BANK': 7,
@@ -78,6 +84,8 @@ list_2 = [11, 9, 43, 22, 55]
 - 20 9
 - 18 11
 
+***Code :***
+
 ```python
 list_1 = [12, 25, 31, 20, 18]
 list_2 = [11, 9, 43, 22, 55]
@@ -103,6 +111,8 @@ This Section We are not providing the entire spark code, Please declear imports 
 - emp_id,emp_name,dept nare
 - 101, Alice, Sales
 - 102, Bob, Sales
+
+***Code :***
 
 ```python
 df = spark.read.csv("path/to/file.csv", header=True, inferSchema=True) 
