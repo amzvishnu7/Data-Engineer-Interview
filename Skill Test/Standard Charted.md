@@ -22,3 +22,45 @@
 
 - *Input:* n=2
 - *Output:* false
+
+***Code : ***
+
+This Question We are using Scala
+
+```scala
+package pack
+
+import scala.io.StdIn
+import scala.collection.mutable
+
+object scalastdy {
+	def main(args:Array[String]):Unit= {
+		
+		println("Enter the Number : ")
+		var n = StdIn.readInt()
+		
+		var sum = 0
+		var rem = 0
+		var sq = 0
+		var numbers = mutable.Set[Int]()
+		
+		while (sum != 1) {
+			while (n > 0) {
+				rem = n % 10
+				sq = rem * rem
+				sum = sum + sq
+				n = n / 10
+			}
+			if (numbers.contains(sum)) {
+				println("false")
+				return
+			}
+			numbers += sum
+			n = sum
+			sum = (if (sum == 1) 1 else 0)
+			println(n)
+		}
+		println("true")
+	}	
+}
+```
