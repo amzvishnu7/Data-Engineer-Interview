@@ -1,4 +1,4 @@
-## Synechron - Interview Senerio Based Question
+## Synechron - Interview Senerio Based Question (Data Engineer)
 
 The interviewers at the time of the interview asked the questions that are addressed below. We are not mentioning sources of the questions.
 
