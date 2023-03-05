@@ -3,9 +3,9 @@
 The interviewers at the time of the interview asked the questions that are addressed below. We are not mentioning sources of the questions.
 
 
-### Section -1 : Scala Spark or Pyspark
+### Section -1 : Scala Spark or Pyspark (For this Example We are using Scala Code)
 
-#### Q1.Read the contents of a text file called "sync.txt" using Scala Spark or PySpark to get the desired output.
+#### Q1. Read the contents of a text file called "sync.txt" using Scala Spark or PySpark to get the desired output.
 
 **SYNC.Txt**
 
