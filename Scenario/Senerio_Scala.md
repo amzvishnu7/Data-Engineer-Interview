@@ -47,3 +47,55 @@ object scalastudy {
 ```
 - sum1 = 1 + 5 + 9
 - sum2 = 3 + 5 + 7 
+
+```scala
+package pack
+import scala.Array.ofDim
+import scala.io.StdIn
+object digonalsum {
+
+  def main(arg: Array[String]): Unit = {
+
+    println("Enter the No of rows & Columns of Matrix")
+    var m = StdIn.readInt()
+    var n = StdIn.readInt()
+    var A = ofDim[Int](m,n)
+    var sum = 0
+    var sum1 = 0
+
+    if (m == n) {
+      println("Enter The Elements of  Matrix")
+      for (i <- 0 until m; j <- 0 until n) {
+        print(s"$i $j th element : ")
+        A(i)(j) = StdIn.readInt()
+      }
+      println()
+      println("Display Matrix")
+      for (i <- 0 until m) {
+        for (j <- 0 until n) {
+          print(" " + A(i)(j))
+        }
+        println()
+      }
+
+      for (i <- 0 until m; j <- 0 until n) {
+        if (i == j) {
+          sum = sum + A(i)(j)
+        }
+        if ((i + j) == (n - 1)) {
+          sum1 = sum1 + A(i)(j)
+        }
+      }
+      println()
+      println("Sum of Main Diagonal : " + sum)
+      println("Sum of Second Diagonal : " + sum1)
+    }
+    else {
+      println("Not a Square Matrix")
+    }
+
+  }
+
+}
+
+```
