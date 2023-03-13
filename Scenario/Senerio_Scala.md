@@ -99,3 +99,27 @@ object digonalsum {
 }
 
 ```
+#### Q3. Write a function in scala to print first n fibonacci sequence using Recursion. (HCL Interview Questions)
+
+```scala
+package pack
+import scala.io.StdIn
+object fib {
+
+  def fib(n:Int):Int={
+    if(n < 2) n
+    else (fib(n-1)+fib(n-2))
+  }
+
+  def main(args:Array[String]):Unit={
+
+    val n = StdIn.readInt()
+    print(s"The first $n Fibonacci numbers are : ")
+    for(i<- 0 to n) {
+      print(fib(i)+", ")
+    }
+
+  }
+
+}
+```
