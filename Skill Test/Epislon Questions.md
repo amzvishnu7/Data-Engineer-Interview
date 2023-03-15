@@ -61,7 +61,7 @@ Find the location that the boy should go to such that he reaches the maximum num
 
 Return the location where the boy should go first. If there are multiple answers, then return the largest one.
 
-** Example **
+**Example:**
 - input1: 5
 - Output: 3
 
